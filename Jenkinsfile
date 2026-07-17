@@ -20,7 +20,13 @@ pipeline{
                 sh "npm test"
             }
         }
-
-        // Add the Release stage here
+	stage("Release"){
+            steps{
+                sh '''
+                    oc project pljetv-jenkins 
+                    oc start-build greeting-consule --follow --wait
+                '''
+            }
+        }
     }
 }
