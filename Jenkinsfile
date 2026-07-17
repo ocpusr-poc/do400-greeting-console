@@ -24,7 +24,7 @@ pipeline{
             steps{
                 sh '''
                     oc project pljetv-greetings 
-                    oc start-build greeting-consule --follow --wait
+                    oc start-build greeting-console --follow --wait
                 '''
             }
         }
