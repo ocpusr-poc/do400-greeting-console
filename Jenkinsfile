@@ -23,7 +23,7 @@ pipeline{
 	stage("Release"){
             steps{
                 sh '''
-                    oc project pljetv-greetings 
+                    oc project m-greetings 
                     oc start-build greeting-console --follow --wait
                 '''
             }
